@@ -1,0 +1,17 @@
+header {
+    padding: 5px;
+    display: inline;
+    float: left;    
+    width: 100%;
+}
+header .logo {   
+    float: left;     
+}
+.logo img {
+    max-width: 150px;   
+}
+header .login{
+    padding: 5px;
+    float: right;
+    text-align: center;
+}

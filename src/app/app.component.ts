@@ -1,9 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
-  template: `<div>Hello {{value}}</div>`,
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  value = 'World';
+export class AppComponent implements OnInit {  
+  constructor(private titleService: Title){}     
+
+  ngOnInit(): void {
+    this.titleService.setTitle('POC-Sunny Portal')
+  }
+ 
 }

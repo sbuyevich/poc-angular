@@ -1,0 +1,61 @@
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    background: white;  
+    height: calc(100vh - 20px);
+    margin: 0;
+    font: 500 100% freight-sans-pro, sans-serif;  
+    //text-transform: uppercase;
+  }
+  
+  .container {
+    background: white;
+    height: 100vh;
+    box-shadow: 0 0 3px rgba(black, 0.33);
+  
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: min-content min-content 1fr min-content;
+    grid-template-areas:
+    "header header"
+    "aside nav"
+    "aside main"
+    "footer footer";
+    //gap: 1px;
+  
+    > * {
+      //padding: 1rem;
+      text-align: center;
+    }
+  
+    @media (max-width: 600px) {        
+      grid-template-areas:
+      "header"
+      "aside"    
+      "main"
+      "footer";    
+      grid-template-columns: auto !important;
+      grid-template-rows: auto  !important;
+    }
+  }
+  
+  app-header {
+    grid-area: header;    
+    background: rgba(2, 65, 98, 0.05);;    
+  }
+  
+  app-aside {
+    grid-area: aside;  
+    background: #ced8d5;  
+  }
+  main {
+    grid-area: main;  
+    background: #dcedc8;
+  }
+  app-footer {
+    grid-area: footer;  
+    background: #ffecb3;
+  }
+  
